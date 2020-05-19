@@ -1,0 +1,26 @@
+.button {
+  padding: 17px 40px;
+  cursor: pointer;
+  color: $bg;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+
+  &--buy {
+    border: 1px solid $text-dark;
+    background-color: $text-dark;
+
+    &:hover {
+      background-color: $hover-dark;
+    }
+  }
+
+  &--form {
+    background-color: $accent-light;
+    border: 1px solid $accent-light;
+
+    &:hover {
+      background-color: $accent-dark;
+    }
+  }
+
+}

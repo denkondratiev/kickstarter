@@ -1,0 +1,73 @@
+.form {
+  width: 100%;
+
+  &__label {
+    display: block;
+
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    padding: 15px 30px;
+
+    border: 1px solid $el-opacity;
+    outline: none;
+
+    font-size: 16px;
+    line-height: 19px;
+    color: $text-dark;
+
+    &:focus,
+    &:active {
+      border: 1px solid $text-dark;
+    }
+
+    &::placeholder {
+      font-family: Roboto, sans-serif;
+      color: $el-opacity;
+    }
+
+  }
+
+  &__message {
+    height: 128px;
+    resize: none;
+  }
+
+  &__contacts {
+    max-width: 438px;
+  }
+
+  &__success {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  
+    display: none;
+
+    color: $bg;
+    background-color: $accent-dark;
+    text-transform: uppercase;
+
+  }
+
+  &__success--active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+  }
+
+}

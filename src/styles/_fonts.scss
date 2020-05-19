@@ -1,6 +1,41 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Regular.ttf") format("ttf");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoCondensed-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoCondensed-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/Heebo-Medium.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/Heebo-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/Heebo-Black.ttf") format("ttf");
+  font-weight: 800;
   font-style: normal;
 }

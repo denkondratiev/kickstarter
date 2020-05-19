@@ -1,0 +1,19 @@
+.technology {
+  position: relative;
+
+  &__title {
+    color: $text-dark;
+    padding: 0 100px;
+  }
+
+  &__photo {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}

@@ -1,0 +1,54 @@
+.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $accent-light;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hover-dark;
+    transform: rotate(180deg);
+  }
+
+  &::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+
+  &:nth-of-type(1) {
+    top: 30%;
+    left: 8%;
+  }
+
+  &:nth-of-type(2) {
+    top: 48%;
+    left: 20%;
+  }
+
+  &:nth-of-type(3) {
+    top: 20%;
+    left: 28%;
+  }
+
+  &:nth-of-type(4) {
+    top: 24%;
+    left: 49%;
+  }
+
+  &:nth-of-type(5) {
+    top: 40%;
+    right: 23%;
+  }
+
+  &:nth-of-type(6) {
+    top: 28%;
+    right: 7%;
+  }
+
+}

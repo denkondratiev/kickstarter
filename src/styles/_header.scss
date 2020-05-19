@@ -1,0 +1,80 @@
+.header {
+  position: relative;
+  padding-top: 13px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 103px;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 121px;
+  }
+
+  &__description {
+    max-width: 380px;
+  }
+
+  &__photo {
+    overflow-x: hidden;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    color: $text-dark;
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    max-width: 276px;
+    color: $text-dark;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+}
+
+.switcher {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 12px;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-right: 37px;
+
+      &::before {
+        content: "/";
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 21px;
+    color: $el-opacity;
+    transition: color 0.3s ease;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $text-dark;
+    }
+    
+  }
+}

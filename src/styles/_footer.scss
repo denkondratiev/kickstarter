@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 142px 0 100px;
+
+  &__socials {
+    margin-bottom: 36px;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 46px;
+
+    cursor: pointer;
+    background-color: $social;
+    transition: background-color 0.3s ease;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon-facebook {
+    mask: url(../images/social/facebook.svg) center / contain no-repeat;
+    
+    &:hover {
+      background: $facebook-hover;
+    }
+  }
+
+  &__icon-twitter {
+    mask: url(../images/social/twitter.svg) center / contain no-repeat;
+    
+    &:hover {
+      background: $twitter-hover;
+    }
+  }
+
+  &__icon-instagram {
+    mask: url(../images/social/instagram.svg) center / contain no-repeat;
+    
+    &:hover {
+      background: $instagram-hover;
+    }
+  }
+
+  &__copy {
+    color: $el-opacity;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

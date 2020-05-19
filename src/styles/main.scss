@@ -1,7 +1,55 @@
+@import "reset";
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
+@import "button";
+@import "navigation";
+@import "services";
+@import "video";
+@import "design";
+@import "technology";
+@import "circles";
+@import "testimonials";
+@import "features";
+@import "contacts";
+@import "form";
+@import "footer";
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: $c-gray;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  background-color: $bg;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 123px;
+  padding-right: 123px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.logo {
+  display: block;
+  width: 161px;
+  height: 26px;
+
+  &--footer {
+    margin-bottom: 65px;
+  }
 }
