@@ -1,5 +1,7 @@
 .technology {
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 
   &__title {
     color: $text-dark;
@@ -8,12 +10,29 @@
 
   &__photo {
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   &__img {
-    max-width: 100%;
-    height: auto;
+    transform: translateX(100px);
   }
 
+}
+
+@media (max-width: 686px) {
+  .technology {
+    padding: 0 30px;
+
+    &__img {
+      width: 100%;
+      height: 600px;
+      transform: translateX(0) rotate(-55deg);
+    }
+
+    &__title {
+      padding: 0;
+      margin-bottom: 40px;
+    }
+
+  }
 }

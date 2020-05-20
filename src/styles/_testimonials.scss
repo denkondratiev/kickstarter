@@ -6,7 +6,7 @@
 
   max-width: 786px;
   margin: 0 auto;
-  padding: 150px 0;
+  padding: 150px 30px;
 
   &::before {
     content: "";
@@ -56,4 +56,10 @@
     color: $text-light;
   }
 
+}
+
+@media (max-width: 686px) {
+  .testimonial {
+    padding: 70px 30px;
+  }
 }

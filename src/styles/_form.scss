@@ -40,34 +40,18 @@
   &__message {
     height: 128px;
     resize: none;
+
+    font-family: Roboto, sans-serif;
   }
 
   &__contacts {
     max-width: 438px;
   }
 
-  &__success {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-  
-    display: none;
+}
 
-    color: $bg;
-    background-color: $accent-dark;
-    text-transform: uppercase;
-
+@media (max-width: 686px) {
+  .form__contacts {
+    max-width: 100%;
   }
-
-  &__success--active {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 10;
-  }
-
 }

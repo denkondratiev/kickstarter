@@ -1,0 +1,52 @@
+.burger {
+  display: none;
+  background: transparent;
+  position: relative;
+  height: 14px;
+  width: 24px;
+
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 2px;
+    width: 24px;
+    left: 0;
+    background: $accent-light;
+    backface-visibility: hidden;
+    transition: 0.3s ease;
+  }
+
+  &::before {
+    box-shadow: $accent-light 0 14px 0 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &::after {
+    position: absolute;
+    top: calc(100% - 7px);
+  }
+
+  &--active {
+
+    &::before {
+      box-shadow: transparent 0 0 0 0;
+      top: 50%;
+      transform: rotate(225deg);
+    }
+
+    &::after {
+      top: 50%;
+      transform: rotate(315deg);
+    }
+  }
+
+}
+
+@media (max-width: 686px) {
+  .burger {
+    display: block;
+  }
+}

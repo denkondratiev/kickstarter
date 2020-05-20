@@ -1,0 +1,41 @@
+.switcher {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 12px;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-right: 37px;
+
+      &::before {
+        content: "/";
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 21px;
+    color: $el-opacity;
+    transition: color 0.3s ease;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $text-dark;
+    }
+    
+  }
+}
+
+@media (max-width: 686px) {
+  .switcher {
+    display: none;
+  }
+}

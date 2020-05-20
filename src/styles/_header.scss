@@ -24,11 +24,6 @@
     overflow-x: hidden;
   }
 
-  &__img {
-    max-width: 100%;
-    height: auto;
-  }
-
   &__title {
     color: $text-dark;
     margin-bottom: 27px;
@@ -43,38 +38,41 @@
 
 }
 
-.switcher {
-  display: flex;
-  align-items: center;
+@media (max-width: 1024px) {
+  .header {
 
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    margin-right: 12px;
-    text-transform: uppercase;
-
-    &:last-child {
-      margin-right: 37px;
-
-      &::before {
-        content: "/";
-      }
+    &__title {
+      font-size: 48px;
+      line-height: 62px;
     }
+
   }
+}
 
-  &__link {
-    font-size: 14px;
-    line-height: 21px;
-    color: $el-opacity;
-    transition: color 0.3s ease;
+@media (max-width: 686px) {
+  .header {
 
-    &:active,
-    &:focus,
-    &:hover {
-      color: $text-dark;
+    &__row {
+      margin-bottom: 0;
     }
-    
+
+    &__main {
+      flex-direction: column-reverse;
+      margin-bottom: 0;
+    }
+
+    &__description {
+      text-align: center;
+    }
+
+    &__img {
+      width: 150%;
+    }
+
+    &__text {
+      max-width: 100%;
+      text-align: center;
+    }
+
   }
 }

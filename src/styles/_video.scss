@@ -25,8 +25,37 @@
     transform: translate(-50%, -50%);
   }
 
+  &__icon-mobile {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
   &__icon-text {
     display: block;
     color: $video;
   }
+}
+
+@media (max-width: 686px) {
+  .video {
+
+    &__icon {
+      width: 108px;
+      height: 108px;
+    }
+
+    &__icon-text {
+      display: none;
+    }
+
+    &__icon-mobile {
+      display: block;
+    }
+
+  }
+  
 }

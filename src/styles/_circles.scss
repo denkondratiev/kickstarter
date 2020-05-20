@@ -1,15 +1,88 @@
+.square {
+  position: absolute;
+  width: 150px;
+  height: 300px;
+  background-color: transparent;
+  border: 1px solid $text-dark;
+  border-color: transparent;
+  transition: border-color 1s ease;
+
+  &__text {
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    line-height: 21px;
+    transition: opacity 1s ease;
+
+    opacity: 0;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 40px;
+      height: 5px;
+      background-color: $text-dark;
+    }
+
+  }
+
+  &--active {
+    border-right-color: $text-dark;
+    border-bottom-color: $text-dark;
+  }
+
+  &__text--active {
+    opacity: 1;
+  }
+
+  &:nth-of-type(1) {
+    top: 44%;
+    left: 6%;
+  }
+
+  &:nth-of-type(2) {
+    top: 55%;
+    left: 29%;
+  }
+
+  &:nth-of-type(3) {
+    left: 36%;
+    top: 36%;
+  }
+
+  &:nth-of-type(4) {
+    top: 24%;
+    left: 52%;
+  }
+
+  &:nth-of-type(5) {
+    top: 40%;
+    right: 17%;
+  }
+
+  &:nth-of-type(6) {
+    top: 30%;
+    right: 11%;
+  }
+}
+
 .circle {
   position: absolute;
+  top: -60px;
+  right: -20px;
   width: 40px;
   height: 40px;
+
+  z-index: 1;
+
   border-radius: 50%;
   background-color: $accent-light;
   transition: background-color 0.3s ease, transform 0.3s ease;
 
   &:hover {
     cursor: pointer;
-    background-color: $hover-dark;
-    transform: rotate(180deg);
   }
 
   &::before {
@@ -21,34 +94,15 @@
     color: #fff;
   }
 
-  &:nth-of-type(1) {
-    top: 30%;
-    left: 8%;
+  &--active {
+    background-color: $hover-dark;
+    transform: rotate(225deg);
   }
 
-  &:nth-of-type(2) {
-    top: 48%;
-    left: 20%;
-  }
+}
 
-  &:nth-of-type(3) {
-    top: 20%;
-    left: 28%;
+@media (max-width: 686px) {
+  .square {
+    display: none;
   }
-
-  &:nth-of-type(4) {
-    top: 24%;
-    left: 49%;
-  }
-
-  &:nth-of-type(5) {
-    top: 40%;
-    right: 23%;
-  }
-
-  &:nth-of-type(6) {
-    top: 28%;
-    right: 7%;
-  }
-
 }

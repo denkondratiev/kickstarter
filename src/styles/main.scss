@@ -3,17 +3,22 @@
 @import "fonts";
 @import "typography";
 @import "header";
+@import "switcher";
+@import "burger";
 @import "button";
 @import "navigation";
 @import "services";
 @import "video";
 @import "design";
+@import "arrows";
 @import "technology";
 @import "circles";
 @import "testimonials";
 @import "features";
 @import "contacts";
+@import "success";
 @import "form";
+@import "socials";
 @import "footer";
 
 html {
@@ -22,7 +27,9 @@ html {
 
 body {
   font-family: Roboto, sans-serif;
+  font-size: 16px;
   font-style: normal;
+  line-height: 24px;
   background-color: $bg;
 }
 
@@ -44,12 +51,25 @@ body {
   }
 }
 
+@media (max-width: 968px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 .logo {
   display: block;
   width: 161px;
   height: 26px;
 
+  z-index: 1;
+
   &--footer {
+    margin-bottom: 65px;
+  }
+
+  &--success {
     margin-bottom: 65px;
   }
 }

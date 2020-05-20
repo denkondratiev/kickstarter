@@ -1,9 +1,14 @@
 .button {
-  padding: 17px 40px;
   cursor: pointer;
   color: $bg;
   text-transform: uppercase;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &__link {
+    display: block;
+    color: inherit;
+    padding: 17px 40px;
+  }
 
   &--buy {
     border: 1px solid $text-dark;
@@ -15,11 +20,23 @@
   }
 
   &--form {
+    padding: 17px 40px;
     background-color: $accent-light;
     border: 1px solid $accent-light;
 
     &:hover {
       background-color: $accent-dark;
+    }
+  }
+
+  &--success {
+    color: $accent-light;
+    background-color: transparent;
+    border: 1px solid $accent-light;
+
+    &:hover {
+      background-color: $accent-dark;
+      color: #fff;
     }
   }
 
