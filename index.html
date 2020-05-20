@@ -10,10 +10,15 @@
       type="image/x-icon"
     >
     <link rel="stylesheet" href="./styles/main.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
   </head>
   <body>
 
-    <header class="header container">
+    <header class="header container" id="header">
       <div class="header__row">
         <a href="#" class="logo">
           <img
@@ -33,8 +38,11 @@
               <a href="#" class="switcher__link">UA</a>
             </li>
           </ul>
-          <button class="button button--buy">Buy</button>
+          <button class="button button--buy">
+            <a href="#contacts" class="button__link">Buy</a>
+          </button>
         </nav>
+        <div class="burger"></div>
       </div>
       <div class="header__main">
       <div class="header__description">
@@ -53,26 +61,79 @@
         >
       </div>
       </div>
-      <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="#video" class="nav__link">OUR STORY</a>
-        </li>
-        <li class="nav__item">
-          <a href="#design" class="nav__link">ABOUT US</a>
-        </li>
-        <li class="nav__item">
-          <a href="#technology" class="nav__link">TECHNOLOGY</a>
-        </li>
-        <li class="nav__item">
-          <a href="#features" class="nav__link">FEATURES</a>
-        </li>
-        <li class="nav__item">
-          <a href="#contacts" class="nav__link">GET IN TOUCH</a>
-        </li>
-      </ul>
+      <nav class="nav nav__header">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#video" class="nav__link">OUR STORY</a>
+          </li>
+          <li class="nav__item">
+            <a href="#design" class="nav__link">ABOUT US</a>
+          </li>
+          <li class="nav__item">
+            <a href="#technology" class="nav__link">TECHNOLOGY</a>
+          </li>
+          <li class="nav__item">
+            <a href="#features" class="nav__link">FEATURES</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link">GET IN TOUCH</a>
+          </li>
+        </ul>
       </nav>
+      <!-- Nav mobile-->
+      <nav class="nav nav__mobile">
+        <ul class="nav__list nav__list--mob">
+          <li class="nav__item nav__item--mob">
+            <a href="#video" class="nav__link">OUR STORY</a>
+          </li>
+          <li class="nav__item nav__item--mob">
+            <a href="#design" class="nav__link">ABOUT US</a>
+          </li>
+          <li class="nav__item nav__item--mob">
+            <a href="#technology" class="nav__link">TECHNOLOGY</a>
+          </li>
+          <li class="nav__item nav__item--mob">
+            <a href="#features" class="nav__link">FEATURES</a>
+          </li>
+          <li class="nav__item nav__item--mob">
+            <a href="#contacts" class="nav__link">GET IN TOUCH</a>
+          </li>
+        </ul>
+        <div class="nav__socials">
+          <div class="socials">
+            <div class="socials__icon socials__facebook">
+              <a
+                href="https://www.facebook.com/"
+                target="blank"
+                class="socials__link"
+              >
+              </a>
+            </div>
+            <div class="socials__icon socials__twitter">
+              <a
+                href="https://www.twitter.com/"
+                target="blank"
+                class="socials__link"
+              >
+              </a>
+            </div>
+            <div class="socials__icon socials__instagram">
+              <a
+                href="https://www.instagram.com/"
+                target="blank"
+                class="socials__link"
+              >
+              </a>
+            </div>
+          </div>
+          <div class="footer__copy">
+            <span>© 2019 All rights reserved. Terms of Use & Privacy Policy</span>
+          </div>
+        </div>
+      </nav>
+      <!-- End Nav mobile-->
     </header>
+
 
     <section class="services container">
       <div class="services__item">
@@ -131,6 +192,19 @@
       </div>
     </section>
 
+    <div class="arrows">
+      <img
+        src="./images/gallery/prev.svg"
+        alt="Prev"
+        class="prev"
+      >
+      <img
+        src="./images/gallery/next.svg"
+        alt="Next"
+        class="next"
+      >
+    </div>
+
     <section class="video" id="video">
       <img
         src="./images/main/main-video.jpg"
@@ -139,17 +213,24 @@
       >
       <div class="video__icon">
         <span class="video__icon-text">PLAY</span>
+        <img
+          src="./images/others/video-mobile.svg"
+          alt="Icon video"
+          class="video__icon-mobile"
+        >
       </div>
     </section>
 
     <section class="design" id="design">
-      <img
+      <div class="design__photo">
+        <img
         src="./images/main/designed-future.jpg"
         alt="Design future"
         class="design__img"
       >
+      </div>
+      <h2 class="design__title">DESIGNED FOR<br>THE FUTURE</h2>
       <div class="design__description">
-        <h2 class="design__title">DESIGNED FOR THE FUTURE</h2>
         <p class="design__text">
           In 2014, a group of geeky industrial designers,
           engineering veterans and acoustic experts formed crazybaby.
@@ -160,15 +241,33 @@
       </div>
     </section>
 
-    <section class="technology container" id="technology">
+    <section class="technology" id="technology">
       <h2 class="technology__title">TECHNOLOGY</h2>
       <div class="technology__photo">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+        <div class="square">
+          <div class="circle"></div>
+          <p class="square__text">Control button ring ornament</p>
+        </div>
+        <div class="square">
+          <div class="circle"></div>
+          <p class="square__text">Control button ring ornament</p>
+        </div>
+        <div class="square">
+          <div class="circle"></div>
+          <p class="square__text">Control button ring ornament</p>
+        </div>
+        <div class="square">
+          <div class="circle"></div>
+          <p class="square__text">Control button ring ornament</p>
+        </div>
+        <div class="square">
+          <div class="circle"></div>
+          <p class="square__text">Control button ring ornament</p>
+        </div>
+        <div class="square">
+          <div class="circle"></div>
+          <p class="square__text">Control button ring ornament</p>
+        </div>
         <img
           src="./images/main/technology.svg"
           alt="Technology photo"
@@ -194,47 +293,90 @@
 
     <section class="features container" id="features">
       <h2 class="features__title">FEATURES</h2>
-      <div class="features__photo">
+      <div class="features__gallery" id="features__gallery">
+        <div class="features__item">
+          <div class="features__block">
+            <h3 class="features__item-title">Sound & Music</h3>
+            <ul class="features__list">
+              <li class="features__list-item">Lossless Digital Audio Transmission</li>
+              <li class="features__list-item">Feel-in-chest Base Power</li>
+              <li class="features__list-item">Easy & Stable Stereo Pairing</li>
+              <li class="features__list-item">Crisp and Clear High Frequency Sound</li>
+              <li class="features__list-item">Streams from Cloud Music and Local Library</li>
+              <li class="features__list-item">Auto Music Playback from Last Song Stopped</li>
+            </ul>
+          </div>
+        </div>
+        <div class="features__item">
+          <div class="features__block">
+            <h3 class="features__item-title">Connectivity</h3>
+            <ul class="features__list">
+              <li class="features__list-item">Lossless Digital Audio Transmission</li>
+              <li class="features__list-item">Feel-in-chest Base Power</li>
+              <li class="features__list-item">Easy & Stable Stereo Pairing</li>
+              <li class="features__list-item">Crisp and Clear High Frequency Sound</li>
+              <li class="features__list-item">Streams from Cloud Music and Local Library</li>
+              <li class="features__list-item">Auto Music Playback from Last Song Stopped</li>
+            </ul>
+          </div>
+        </div>
+        <div class="features__item">
+          <div class="features__block">
+            <h3 class="features__item-title">App Features</h3>
+            <ul class="features__list">
+              <li class="features__list-item">Lossless Digital Audio Transmission</li>
+              <li class="features__list-item">Feel-in-chest Base Power</li>
+              <li class="features__list-item">Easy & Stable Stereo Pairing</li>
+              <li class="features__list-item">Crisp and Clear High Frequency Sound</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="features__arrows">
         <img
+          src="./images/gallery/prev.svg"
+          alt="Prev"
+          class="features__prev"
+        >
+        <img
+          src="./images/gallery/next.svg"
+          alt="Next"
+          class="features__next"
+        >
+      </div>
+      <img
         src="./images/main/features.jpg"
         alt="Features photo"
         class="features__img"
       >
-      </div>
-      <div class="features__gallery">
-        <div class="features__item">
-          <h3 class="features__item-title">Sound & Music</h3>
-          <ul class="features__list">
-            <li class="features__list-item">Lossless Digital Audio Transmission</li>
-            <li class="features__list-item">Feel-in-chest Base Power</li>
-            <li class="features__list-item">Easy & Stable Stereo Pairing</li>
-            <li class="features__list-item">Crisp and Clear High Frequency Sound</li>
-            <li class="features__list-item">Streams from Cloud Music and Local Library</li>
-            <li class="features__list-item">Auto Music Playback from Last Song Stopped</li>
-          </ul>
-        </div>
-        <div class="features__item">
-          <h3 class="features__item-title">Connectivity</h3>
-          <ul class="features__list">
-            <li class="features__list-item">Lossless Digital Audio Transmission</li>
-            <li class="features__list-item">Feel-in-chest Base Power</li>
-            <li class="features__list-item">Easy & Stable Stereo Pairing</li>
-            <li class="features__list-item">Crisp and Clear High Frequency Sound</li>
-            <li class="features__list-item">Streams from Cloud Music and Local Library</li>
-            <li class="features__list-item">Auto Music Playback from Last Song Stopped</li>
-          </ul>
-        </div>
-        <div class="features__item">
-          <h3 class="features__item-title">App Features</h3>
-          <ul class="features__list">
-            <li class="features__list-item">Lossless Digital Audio Transmission</li>
-            <li class="features__list-item">Feel-in-chest Base Power</li>
-            <li class="features__list-item">Easy & Stable Stereo Pairing</li>
-            <li class="features__list-item">Crisp and Clear High Frequency Sound</li>
-          </ul>
-        </div>
-      </div>
     </section>
+
+    <div class="success">
+      <div class="success__block">
+        <div class="success__promo">
+          <p class="success__title">Thank you!</p>
+          <p class="success__text">We hope you enjoy your purchase!</p>
+          <p class="success__text">Your order is proccessing. We’ll email you an update when we’ve shipp</p>
+          <button class="button button--success">
+            <a href="#header" class="button__link">Homepage</a>
+          </button>
+        </div>
+        <div class="success__footer">
+          <a href="#" class="logo logo--success">
+            <img
+              src="./images/logo.svg"
+              alt="Logo kickstarter"
+            >
+          </a>
+          <div class="socials">
+            <div class="socials__icon socials__facebook"></div>
+            <div class="socials__icon socials__twitter"></div>
+            <div class="socials__icon socials__instagram"></div>
+          </div>
+          <span class="success__copy">© 2019 All rights reserved. Terms of Use & Privacy Policy</span>
+        </div>
+      </div>
+    </div>
 
     <section class="contacts container" id="contacts">
       <h2 class="contacts__title">DO YOU HAVE ANY QUESTIONS?</h2>
@@ -245,29 +387,6 @@
         class="form form__contacts"
         autocomplete="off"
       >
-      <div class="form__success">
-        <span>Thank you</span>
-        <br>
-        <p>We hope you enjoy your purchase!</p>
-        <br>
-        <p>Your order is proccessing. We’ll email you an update when we’ve shipp</p>
-        <div class="form__success-block">
-          <a href="#" class="logo">
-            <img
-              src="./images/logo.svg"
-              alt="Logo kickstarter"
-            >
-          </a>
-          <div class="footer__socials">
-            <div class="footer__icon footer__icon-facebook"></div>
-            <div class="footer__icon footer__icon-twitter"></div>
-            <div class="footer__icon footer__icon-instagram"></div>
-          </div>
-          <div class="footer__copy">
-            <span>© 2019 All rights reserved. Terms of Use & Privacy Policy</span>
-          </div>
-        </div>
-      </div>
       <label class="form__label" for="email">
         <input
           type="email"
@@ -307,10 +426,31 @@
           alt="Logo kickstarter"
         >
       </a>
-      <div class="footer__socials">
-        <div class="footer__icon footer__icon-facebook"></div>
-        <div class="footer__icon footer__icon-twitter"></div>
-        <div class="footer__icon footer__icon-instagram"></div>
+      <div class="socials">
+        <div class="socials__icon socials__facebook">
+          <a
+            href="https://www.facebook.com/"
+            target="blank"
+            class="socials__link"
+          >
+          </a>
+        </div>
+        <div class="socials__icon socials__twitter">
+          <a
+            href="https://www.twitter.com/"
+            target="blank"
+            class="socials__link"
+          >
+          </a>
+        </div>
+        <div class="socials__icon socials__instagram">
+          <a
+            href="https://www.instagram.com/"
+            target="blank"
+            class="socials__link"
+          >
+          </a>
+        </div>
       </div>
       <div class="footer__copy">
         <span>© 2019 All rights reserved. Terms of Use & Privacy Policy</span>
@@ -318,6 +458,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
