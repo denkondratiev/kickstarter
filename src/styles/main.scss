@@ -3,6 +3,7 @@
 @import "fonts";
 @import "typography";
 @import "header";
+@import "logo";
 @import "switcher";
 @import "burger";
 @import "button";
@@ -55,21 +56,5 @@ body {
   .container {
     padding-left: 30px;
     padding-right: 30px;
-  }
-}
-
-.logo {
-  display: block;
-  width: 161px;
-  height: 26px;
-
-  z-index: 1;
-
-  &--footer {
-    margin-bottom: 65px;
-  }
-
-  &--success {
-    margin-bottom: 65px;
   }
 }

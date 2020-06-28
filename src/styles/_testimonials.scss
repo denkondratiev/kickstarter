@@ -61,5 +61,9 @@
 @media (max-width: 686px) {
   .testimonial {
     padding: 70px 30px;
+
+    &__text {
+      font-size: 16px;
+    }
   }
 }

@@ -1,5 +1,4 @@
 .header {
-  position: relative;
   padding-top: 13px;
 
   &__row {
@@ -49,6 +48,20 @@
   }
 }
 
+@media (max-width: 918px) {
+  .header {
+
+    &__description {
+      position: absolute;
+    }
+
+    &__img {
+      max-width: 100%;
+      transform: translateX(255px);
+    }
+  }
+}
+
 @media (max-width: 686px) {
   .header {
 
@@ -62,11 +75,13 @@
     }
 
     &__description {
+      position: relative;
       text-align: center;
     }
 
     &__img {
-      width: 150%;
+      transform: translateX(0);
+      max-width: 150%;
     }
 
     &__text {
@@ -74,5 +89,17 @@
       text-align: center;
     }
 
+    &__title {
+      font-size: 36px;
+      line-height: 46px;
+    }
+
+  }
+}
+
+@media (max-width: 425px) {
+  .header__title {
+    font-size: 26px;
+    line-height: 36px;
   }
 }

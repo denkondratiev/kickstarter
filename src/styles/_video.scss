@@ -4,58 +4,13 @@
   margin: 0 auto;
   overflow-x: hidden;
 
-  &__img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  &__icon {
-    width: 232px;
-    height: 232px;
-
-    border-radius: 50%;
-    border: 1px solid  $video;
-    text-align: center;
-    line-height: 232px;
-    cursor: pointer;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &__icon-mobile {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-  }
-
-  &__icon-text {
-    display: block;
-    color: $video;
+  &__frame {
+    height: 680px;
   }
 }
 
 @media (max-width: 686px) {
-  .video {
-
-    &__icon {
-      width: 108px;
-      height: 108px;
-    }
-
-    &__icon-text {
-      display: none;
-    }
-
-    &__icon-mobile {
-      display: block;
-    }
-
+  .video__frame {
+    height: 280px;
   }
-  
 }
