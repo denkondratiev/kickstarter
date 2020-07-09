@@ -47,11 +47,15 @@
 
   &__footer {
     position: absolute;
-    bottom: 50px;
     display: flex;
+    width: 100%;
+    bottom: 50px;
+    padding: 0 20px;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
   }
 
   &__socials {

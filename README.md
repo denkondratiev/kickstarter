@@ -1,4 +1,7 @@
-# Base layout template with Gulp, SCSS and Stylelint
-1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://denkondratiev.github.io/kickstarter/)
+# Landing page for startup company
+
+- [DEMO LINK](https://denkondratiev.github.io/kickstarter/)
+
+## Stack
+    HTML/SCSS, JavaScript, Jquery, Gulp, BEM methodology
+
