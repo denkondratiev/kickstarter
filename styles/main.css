@@ -204,7 +204,8 @@ h3 {
             align-items: center;
     margin-bottom: 121px; }
   .header__description {
-    max-width: 380px; }
+    max-width: 380px;
+    z-index: 1; }
   .header__photo {
     overflow-x: hidden; }
   .header__title {
@@ -230,27 +231,42 @@ h3 {
             transform: translateX(255px); } }
 
 @media (max-width: 686px) {
-  .header__row {
-    margin-bottom: 0; }
-  .header__main {
+  .header {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    margin-bottom: 0; }
-  .header__description {
-    position: relative;
-    text-align: center; }
-  .header__img {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    max-width: 150%; }
-  .header__text {
-    max-width: 100%;
-    text-align: center; }
-  .header__title {
-    font-size: 36px;
-    line-height: 46px; } }
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 21px;
+    padding-top: 21px; }
+    .header__row {
+      margin-bottom: 0; }
+    .header__main {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      margin-bottom: 0; }
+    .header__description {
+      position: relative;
+      text-align: center;
+      z-index: 0; }
+    .header__img {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      max-width: 150%; }
+    .header__text {
+      max-width: 100%;
+      text-align: center; }
+    .header__title {
+      font-size: 36px;
+      line-height: 46px; } }
 
 @media (max-width: 425px) {
   .header__title {
@@ -954,10 +970,12 @@ h3 {
       margin-bottom: 40px; }
   .success__footer {
     position: absolute;
-    bottom: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
+    bottom: 50px;
+    padding: 0 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1083,7 +1101,8 @@ h3 {
   .footer__copy {
     color: #bdbdbd;
     font-size: 14px;
-    line-height: 21px; }
+    line-height: 21px;
+    text-align: center; }
 
 html {
   scroll-behavior: smooth; }
